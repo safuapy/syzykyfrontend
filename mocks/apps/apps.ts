@@ -16,7 +16,7 @@ export const apps = [
     twitter: 'https://twitter.com/HopProtocol',
   },
   {
-    author: 'Blockscout',
+    author: 'SyzykyScan',
     id: 'token-approval-tracker',
     title: 'Token Approval Tracker',
     logo: 'https://approval-tracker.apps.blockscout.com/icon-192.png',

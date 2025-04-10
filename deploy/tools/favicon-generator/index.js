@@ -20,7 +20,7 @@ async function generateFavicons() {
 
     const configuration = {
       path: '/output',
-      appName: 'Blockscout',
+      appName: 'SyzykyScan',
       icons: {
         android: true,
         appleIcon: {

@@ -12,7 +12,7 @@ jobs:
             -   name: Checkout repo
                 uses: actions/checkout@v4
 
-            -   name: Copy main ENV file to Blockscout Docs repository
+            -   name: Copy main ENV file to SyzykyScan Docs repository
                 uses: dmnemec/copy_file_to_another_repo_action@main
                 env:
                     API_TOKEN_GITHUB: ${{ secrets.GITHIB_BOT_TOKEN }}
@@ -26,7 +26,7 @@ jobs:
                     user_name: 'blockscout-bot'
                     use_rsync: true
 
-            -   name: Copy deprecated ENV file to Blockscout Docs repository
+            -   name: Copy deprecated ENV file to SyzykyScan Docs repository
                 uses: dmnemec/copy_file_to_another_repo_action@main
                 env:
                     API_TOKEN_GITHUB: ${{ secrets.GITHIB_BOT_TOKEN }}

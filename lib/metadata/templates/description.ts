@@ -2,7 +2,7 @@
 import type { Route } from 'nextjs-routes';
 
 // equal og:description
-const DEFAULT_TEMPLATE = 'Open-source block explorer by Blockscout. Search transactions, verify smart contracts, analyze addresses, and track network activity. Complete blockchain data and APIs for the %network_title% network.';
+const DEFAULT_TEMPLATE = 'Open-source block explorer by SyzykyScan. Search transactions, verify smart contracts, analyze addresses, and track network activity. Complete blockchain data and APIs for the %network_title% network.';
 
 // FIXME all page descriptions will be updated later
 const TEMPLATE_MAP: Record<Route['pathname'], string> = {
@@ -57,7 +57,7 @@ const TEMPLATE_MAP: Record<Route['pathname'], string> = {
   '/name-domains/[name]': DEFAULT_TEMPLATE,
   '/validators': DEFAULT_TEMPLATE,
   '/validators/[id]': DEFAULT_TEMPLATE,
-  '/gas-tracker': 'Explore real-time %network_title% gas fees with Blockscout\'s advanced gas fee tracker. Get accurate %network_gwei% estimates and track transaction costs live.',
+  '/gas-tracker': 'Explore real-time %network_title% gas fees with SyzykyScan\'s advanced gas fee tracker. Get accurate %network_gwei% estimates and track transaction costs live.',
   '/mud-worlds': DEFAULT_TEMPLATE,
   '/token-transfers': DEFAULT_TEMPLATE,
   '/advanced-filter': DEFAULT_TEMPLATE,

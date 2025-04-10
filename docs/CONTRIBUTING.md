@@ -1,6 +1,6 @@
 # Contribution guide
 
-Thanks for showing interest to contribute to Blockscout. The following steps will get you up and running.
+Thanks for showing interest to contribute to SyzykyScan. The following steps will get you up and running.
 
 &nbsp;
 

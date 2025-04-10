@@ -115,9 +115,9 @@ const LoginStepContent = ({ goNext, closeModal, openAuthModal }: Props) => {
         fallback={ <Skeleton w="full" h="120px" mb={ 3 }/> }
       />
       <Box mb={ 6 }>
-        Merits are awarded for a variety of different Blockscout activities. Connect a wallet to get started.
+        Merits are awarded for a variety of different SyzykyScan activities. Connect a wallet to get started.
         <LinkExternal href="https://docs.blockscout.com/using-blockscout/merits" ml={ 1 } fontWeight="500">
-          More about Blockscout Merits
+          More about SyzykyScan Merits
         </LinkExternal>
       </Box>
       { isSignUp && isLoggedIntoAccountWithWallet && (
@@ -153,7 +153,7 @@ const LoginStepContent = ({ goNext, closeModal, openAuthModal }: Props) => {
       ) }
       { isAddressMismatch && (
         <Alert status="warning" mb={ 4 }>
-          Your wallet address doesn{ apos }t match the one in your Blockscout account. Please connect the correct wallet.
+          Your wallet address doesn{ apos }t match the one in your SyzykyScan account. Please connect the correct wallet.
         </Alert>
       ) }
       <Button
@@ -170,7 +170,7 @@ const LoginStepContent = ({ goNext, closeModal, openAuthModal }: Props) => {
         { buttonText }
       </Button>
       <Text fontSize="sm" color={ useColorModeValue('blackAlpha.500', 'whiteAlpha.500') } textAlign="center">
-        Already registered for Blockscout Merits on another network or chain? Connect the same wallet here.
+        Already registered for SyzykyScan Merits on another network or chain? Connect the same wallet here.
       </Text>
     </>
   );

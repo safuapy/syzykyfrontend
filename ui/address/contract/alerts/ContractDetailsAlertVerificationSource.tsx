@@ -18,7 +18,7 @@ const ContractDetailsAlertVerificationSource = ({ data }: Props) => {
           href="https://docs.blockscout.com/about/features/ethereum-bytecode-database-microservice"
           fontSize="md"
         >
-          Blockscout Bytecode Database
+          SyzykyScan Bytecode Database
         </LinkExternal>
       </Alert>
     );

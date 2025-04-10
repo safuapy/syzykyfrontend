@@ -25,7 +25,7 @@ const RewardsButton = ({ variant = 'header', size }: Props) => {
 
   return (
     <Tooltip
-      label="Earn Merits for using Blockscout"
+      label="Earn Merits for using SyzykyScan"
       textAlign="center"
       padding={ 2 }
       openDelay={ 500 }

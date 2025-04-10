@@ -18,7 +18,7 @@ export interface AddressMetadataTag {
   meta: string | null;
 }
 
-// Response model from Blockscout API with parsed meta field
+// Response model from SyzykyScan API with parsed meta field
 export interface AddressMetadataTagApi extends Omit<AddressMetadataTag, 'meta'> {
   meta: {
     textColor?: string;

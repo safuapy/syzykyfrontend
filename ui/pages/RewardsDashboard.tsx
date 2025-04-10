@@ -35,7 +35,7 @@ const RewardsDashboard = () => {
     return null;
   }
 
-  let shareText = `Claim your free @blockscout #Merits and start building your daily streak today! #Blockscout #Merits #IYKYK\n\nBoost your rewards instantly by using my referral code: ${ referralsQuery.data?.link }`; // eslint-disable-line max-len
+  let shareText = `Claim your free @blockscout #Merits and start building your daily streak today! #SyzykyScan #Merits #IYKYK\n\nBoost your rewards instantly by using my referral code: ${ referralsQuery.data?.link }`; // eslint-disable-line max-len
 
   if (dailyRewardQuery.data?.streak && Number(dailyRewardQuery.data.streak) > 0) {
     const days = `day${ Number(dailyRewardQuery.data.streak) === 1 ? '' : 's' }`;
@@ -49,7 +49,7 @@ const RewardsDashboard = () => {
           title="Dashboard"
           secondRow={ (
             <span>
-              The Blockscout Merits Program is just getting started! Learn more about the details,
+              The SyzykyScan Merits Program is just getting started! Learn more about the details,
               features, and future plans in our{ ' ' }
               <LinkExternal href="https://www.blog.blockscout.com/blockscout-merits-rewarding-block-explorer-skills">
                 blog post
@@ -178,7 +178,7 @@ const RewardsDashboard = () => {
             description={ (
               <Flex flexDir="column" gap={ 2 }>
                 <span>
-                  Collect limited and legendary badges by completing different Blockscout related tasks.
+                  Collect limited and legendary badges by completing different SyzykyScan related tasks.
                   Go to the badges website to see what{ apos }s available and start your collection today.
                 </span>
               </Flex>
@@ -214,7 +214,7 @@ const RewardsDashboard = () => {
         <Flex gap={ 6 } flexDirection={{ base: 'column', md: 'row' }}>
           <RewardsDashboardCard
             title="Activity"
-            description="Earn Merits for your everyday Blockscout activities. You deserve to be rewarded for choosing open-source public goods!"
+            description="Earn Merits for your everyday SyzykyScan activities. You deserve to be rewarded for choosing open-source public goods!"
             availableSoon
             blurFilter
           >
@@ -223,7 +223,7 @@ const RewardsDashboard = () => {
           </RewardsDashboardCard>
           <RewardsDashboardCard
             title="Verify contracts"
-            description="Verified contracts are so important for transparency and interaction. Verify your contracts on Blockscout and receive Merits for your efforts." // eslint-disable-line max-len
+            description="Verified contracts are so important for transparency and interaction. Verify your contracts on SyzykyScan and receive Merits for your efforts." // eslint-disable-line max-len
             availableSoon
             blurFilter
           >

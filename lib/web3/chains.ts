@@ -17,7 +17,7 @@ export const currentChain: Chain = {
   },
   blockExplorers: {
     'default': {
-      name: 'Blockscout',
+      name: 'SyzykyScan',
       url: config.app.baseUrl,
     },
   },
@@ -48,7 +48,7 @@ export const parentChain: Chain | undefined = (() => {
     },
     blockExplorers: {
       'default': {
-        name: 'Blockscout',
+        name: 'SyzykyScan',
         url: parentChain.baseUrl,
       },
     },

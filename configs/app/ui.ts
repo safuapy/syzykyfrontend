@@ -72,6 +72,7 @@ const UI = Object.freeze({
     links: getExternalAssetFilePath('NEXT_PUBLIC_FOOTER_LINKS'),
     frontendVersion: getEnvValue('NEXT_PUBLIC_GIT_TAG'),
     frontendCommit: getEnvValue('NEXT_PUBLIC_GIT_COMMIT_SHA'),
+    logo: getExternalAssetFilePath('NEXT_PUBLIC_NETWORK_LOGO_DARK'),
   },
   homepage: {
     charts: parseEnvJson<Array<ChainIndicatorId>>(getEnvValue('NEXT_PUBLIC_HOMEPAGE_CHARTS')) || [],

@@ -1,8 +1,7 @@
 import type { GridProps, HTMLChakraProps } from '@chakra-ui/react';
-import { Box, Grid, Flex, Text, Link, VStack, useColorModeValue } from '@chakra-ui/react';
+import { Box, Grid, Flex, Text, Link, VStack, useColorModeValue, Image } from '@chakra-ui/react';
 import React from 'react';
 
-import type { CustomLinksGroup } from 'types/footerLinks';
 import type { IconName } from 'ui/shared/IconSvg';
 
 import config from 'configs/app';
@@ -23,27 +22,40 @@ interface FooterLink {
 }
 
 const Footer = () => {
-  const logoColor = useColorModeValue('blue.600', 'white');
-
-  const SYZYKY_LINKS: FooterLink[] = [
+  const SOCIAL_LINKS: FooterLink[] = [
     {
       icon: 'social/twitter',
       iconSize: '18px',
-      text: 'X (Twitter)',
-      url: 'https://x.com/Syzykychain',
-    },
-    {
-      icon: 'social/telega',
-      iconSize: '18px',
-      text: 'Telegram',
-      url: 'https://t.me/syzykyblockchain_official',
+      text: 'Twitter',
+      url: 'https://x.com/syzykyscan',
     },
     {
       icon: 'social/facebook_filled',
       iconSize: '18px',
-      text: 'Instagram',
-      url: 'https://www.instagram.com/syzykyblockchain/',
+      text: 'Facebook',
+      url: 'https://www.facebook.com/syzykyscan',
     },
+    {
+      icon: 'social/medium_filled',
+      iconSize: '18px',
+      text: 'Medium',
+      url: 'https://medium.com/@syzykyscan',
+    },
+    {
+      icon: 'social/telega',
+      iconSize: '18px',
+      text: 'Telegram Group',
+      url: 'https://t.me/syzykyblockchain',
+    },
+    {
+      icon: 'social/telegram_filled',
+      iconSize: '18px',
+      text: 'Telegram Channel',
+      url: 'https://t.me/syzykyblockchain_official',
+    },
+  ];
+
+  const RESOURCE_LINKS: FooterLink[] = [
     {
       icon: 'link',
       iconSize: '18px',
@@ -93,10 +105,17 @@ const Footer = () => {
   }, []);
 
   const renderProjectInfo = React.useCallback((gridArea?: GridProps['gridArea']) => {
+    const logoUrl = config.UI.footer.logo || process.env.NEXT_PUBLIC_NETWORK_LOGO_DARK;
+    
     return (
       <Box gridArea={ gridArea }>
+        {logoUrl && (
+          <Flex alignItems="center" gap={2} mb={3}>
+            <Image src={logoUrl} alt="Syzyky Network Logo" height="24px" width="auto" />
+          </Flex>
+        )}
         <Text mt={ 3 } fontSize="xs">
-          Syzyky Block Explorer - Explore and analyze transactions on the Syzyky Network.
+          The Syzyky Block Explorer serves as your gateway to seamlessly explore, monitor, and analyze transactions, blocks, wallet addresses, and smart contract activity across the Syzyky Network. By providing full transparency and real-time insights, it empowers users to gain a comprehensive understanding of the blockchain ecosystem.
         </Text>
         <Box mt={ 6 } alignItems="start" fontSize="xs" lineHeight={ 5 }>
           <Text>
@@ -134,16 +153,22 @@ const Footer = () => {
           gap={{ base: 6, lg: 8, xl: 12 }}
           gridTemplateColumns={{
             base: 'repeat(auto-fill, 160px)',
-            lg: 'repeat(4, 135px)',
-            xl: 'repeat(4, 160px)',
+            lg: 'repeat(2, 135px)',
+            xl: 'repeat(2, 160px)',
           }}
           justifyContent={{ lg: 'flex-end' }}
           mt={{ base: 8, lg: 0 }}
         >
           <Box>
-            <Text fontWeight={ 500 } mb={ 3 }>Syzyky Network</Text>
+            <Text fontWeight={ 500 } mb={ 3 }>Social Media</Text>
             <VStack spacing={ 1 } alignItems="start">
-              { SYZYKY_LINKS.map(link => <FooterLinkItem { ...link } key={ link.text }/>) }
+              { SOCIAL_LINKS.map(link => <FooterLinkItem { ...link } key={ link.text }/>) }
+            </VStack>
+          </Box>
+          <Box>
+            <Text fontWeight={ 500 } mb={ 3 }>Resources</Text>
+            <VStack spacing={ 1 } alignItems="start">
+              { RESOURCE_LINKS.map(link => <FooterLinkItem { ...link } key={ link.text }/>) }
             </VStack>
           </Box>
         </Grid>
